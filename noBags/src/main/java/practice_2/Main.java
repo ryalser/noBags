@@ -1,6 +1,6 @@
 package practice_2;
 
-import java.lang.reflect.AccessFlag;
+
 
 public class Main {
 
@@ -23,8 +23,9 @@ public class Main {
         //Класс BankAccount
         BankAccount alex = new BankAccount("Alex", 100);
         alex.deposit(1000);
+        System.out.println(alex.getBalanceAfterOperation(alex.getBalance()));
         alex.withdraw(500);
-        alex.printBalance();
+        //alex.printBalance();
 
 
         //Класс Point
@@ -56,7 +57,8 @@ public class Main {
         Product product = new Product("Лимонад", 90);
         product.setPrice(100);
         product.applyDiscount(20);
-        product.printInfo();
+        product.getPrice();
+       // product.printInfo();
 
 
         //Класс Laptop

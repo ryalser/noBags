@@ -16,6 +16,7 @@ public class Product {
     }
 
     double getPrice(){
+        System.out.println("Стоимость " +  this.name + " - " + this.price);
         return this.price;
     }
 
@@ -26,7 +27,8 @@ public class Product {
 
     //Вычисление цены со скидкой
     public double applyDiscount(double discount){
-        return price -= price * (discount / 100);
+        this.price -= price * (discount / 100);
+        return this.price;
     }
 
     void printInfo(){

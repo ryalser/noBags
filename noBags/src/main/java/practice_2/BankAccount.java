@@ -26,23 +26,32 @@ public class BankAccount {
 
 
     //Пополнение
-    public void deposit(double amountDeposit){
+    public double deposit(double amountDeposit){
         this.balance = balance + amountDeposit;
+        return this.balance;
     }
 
     //Вывод
-    public void withdraw(double amountWithdraw){
+    public double withdraw(double amountWithdraw){
         this.balance = balance - amountWithdraw;
+        return this.balance;
     }
 
 
+    //Раньше: вывод в консоль:
     void printBalance(){
         System.out.println("Уважаемый " + owner + " , ваш баланс: " + balance);
     }
 
+    //Теперь: метод, возвращающий строку с инфо о балансе:
+    public String getInfoBalance(double balance){
+        return String.format("Ваш баланс составляет: " + balance);
+    }
 
-
-
+    //Строка с информацией о балансе после операции:
+    public String getBalanceAfterOperation(double balance){
+        return String.format("Ваш баланс после операции составит: " + balance);
+    }
 
 
 }

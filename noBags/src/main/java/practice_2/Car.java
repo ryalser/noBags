@@ -17,7 +17,7 @@ public class Car {
     }
 
     int getYear(){
-        return getYear();
+        return this.year;
     }
 
 
