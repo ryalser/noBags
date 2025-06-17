@@ -22,10 +22,18 @@ public class Car {
 
 
     void setBrand(String newBrand){
+        if(newBrand == null || newBrand == ""){
+            throw new IllegalArgumentException("Не указано название бренда!");
+
+        }
         this.brand = newBrand;
     }
 
     void setYear(int newYear){
+        if (newYear < 1900 || newYear > 2025){
+            throw new IllegalArgumentException("Год автотранспорта должен быть меньше 1900 и больше 2025!");
+        }
+
         this.year = newYear;
     }
 

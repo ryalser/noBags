@@ -21,18 +21,31 @@ public class BankAccount {
 
 
     void setOwner(String newOwner){
+        if(newOwner == null || newOwner == ""){
+            throw new IllegalArgumentException("Не указан владелец счета!");
+
+        }
         this.owner = newOwner;
     }
 
 
-    //Пополнение
+    //Пополнение + проверка на отрицательное число
     public double deposit(double amountDeposit){
+        if (amountDeposit <= 0){
+            throw new IllegalArgumentException("Пополнение не может быть <= 0!");
+        }
         this.balance = balance + amountDeposit;
         return this.balance;
     }
 
     //Вывод
     public double withdraw(double amountWithdraw){
+        if(amountWithdraw <= 0){
+            throw new IllegalArgumentException("Сумма снятия не должна быть <=0!");
+        }
+        if(balance < amountWithdraw){
+            throw new IllegalArgumentException("Сумма снятия не должна быть > баланса денежных средств!");
+        }
         this.balance = balance - amountWithdraw;
         return this.balance;
     }

@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         //Класс Car
         Car bmw = new Car("BMW",1995);
-        bmw.setYear(2000);
+        bmw.setYear(2020);
         bmw.print();
 
         //Класс Rectangle
