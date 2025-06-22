@@ -43,8 +43,8 @@ public class BankAccount {
         if(amountWithdraw <= 0){
             throw new IllegalArgumentException("Сумма снятия не должна быть <=0!");
         }
-        if(balance < amountWithdraw){
-            throw new IllegalArgumentException("Сумма снятия не должна быть > баланса денежных средств!");
+        if(balance < amountWithdraw || balance < 0){
+            throw new IllegalArgumentException("Баланс не должен быть меньше суммы вывода!");
         }
         this.balance = balance - amountWithdraw;
         return this.balance;
@@ -61,7 +61,7 @@ public class BankAccount {
         return String.format("Ваш баланс составляет: " + balance);
     }
 
-    //Строка с информацией о балансе после операции:
+    //+ отдельно строка с информацией о балансе после операции:
     public String getBalanceAfterOperation(double balance){
         return String.format("Ваш баланс после операции составит: " + balance);
     }
