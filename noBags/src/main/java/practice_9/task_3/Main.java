@@ -7,11 +7,11 @@ public class Main  {
         NewThread newThread = new NewThread();
             newThread.start(); // Запускаем поток
 
-            try {
-                Thread.sleep(2000);
-            }catch (InterruptedException e){
-                throw new RuntimeException("error");
-            }
+         try {
+            Thread.sleep(2000);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
 
             // Ставим флаг остановки
             newThread.stop = false;
