@@ -14,7 +14,7 @@ public class Main  {
         }
 
             // Ставим флаг остановки
-            newThread.stop = false;
+            newThread.isRunning = false;
         }
     }
 
