@@ -11,11 +11,10 @@ public class Main {
         );
 
         // Загрузить видео
-        String videoId = service.uploadVideo(".avi");
-        System.out.println(service.uploadVideo(".avi"));
+        String videoId = service.uploadVideo("movie.avi");
+        System.out.println("ID загруженного видео: " + videoId);
 
         // Воспроизвести видео
         System.out.println(service.streamVideo(videoId));
-
     }
 }

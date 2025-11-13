@@ -6,11 +6,6 @@ public class VideoService {
     private List<VideoAdapter> adapters;
     private Map<String,String> video;
 
-    private AviVideoAdapter aviVideoAdapter;
-    private MovVideoAdapter movVideoAdapter;
-    private WmvVideoAdapter wmvVideoAdapter;
-
-
     public VideoService(VideoAdapter... adapters){
         this.adapters = Arrays.asList(adapters);
         this.video = new HashMap<>();
