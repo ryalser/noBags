@@ -80,7 +80,7 @@ public class UserValidator {
 
 
     // Класс исключений
-    class InvalidUserException extends Exception {
+   public static class InvalidUserException extends Exception {
         public InvalidUserException(String s) {
             super(s);
         }

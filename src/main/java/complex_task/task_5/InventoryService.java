@@ -21,6 +21,7 @@ public class InventoryService {
 
         if(!isInventoryOpen){
             System.out.println("Добавление товаров недоступно. Проверь флаг: isInventoryOpen.");
+            return;
         }
 
         // Запишем все товары этой категории в лист, если нет - создаем коллекцию
