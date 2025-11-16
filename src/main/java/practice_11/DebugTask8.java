@@ -14,7 +14,7 @@ public class DebugTask8 {
          * Т.к. для примитивов не используется Equals я привел в условном операторе их к типу int
          */
 
-        if ((int)a == (int)b) {
+        if (Math.abs(a - b) < 1e-9) {
             System.out.println("Equal");
         } else {
             System.out.println("Not Equal");
